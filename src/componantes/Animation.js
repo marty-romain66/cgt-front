@@ -24,7 +24,7 @@ const Animation = () => {
 })
 .to("#root",
 {
-    overflow: "scroll",
+    overflow: "visible",
 })
 
     } , []);
