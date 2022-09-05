@@ -8,16 +8,16 @@ const Articles = ( {post}) => {
  console.log(datas);
 
 
-const animation = () => {
-  for (let i = 0; i < datas.length; i++) {
+// const animation = () => {
+//   for (let i = 0; i < datas.length; i++) {
     
-}
+// }
 
- useEffect(() => {
-    animation()
+//  useEffect(() => {
+//     animation()
   
 
- }, []);
+//  }, []);
  
  
     return (
