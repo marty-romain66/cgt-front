@@ -1,0 +1,14 @@
+.box {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   
+}
+.box2{
+    position: relative;
+}
+ 

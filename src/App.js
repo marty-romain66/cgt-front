@@ -1,24 +1,19 @@
 import logo from './logo.svg';
+import './App.css';
+import { Routes, Route, Link } from "react-router-dom";
+import Home from "./componantes/Home";
+import Animation from "./componantes/Animation";
 import "./sass/style.scss";
-import Start from './components/Start';
-import { useEffect, useState } from 'react';
-import Footer from './components/Footer';
-import Header from './components/Header';
-import BoxCaroussel from './components/BoxCaroussel';
-import Article from './components/Article';
 
 function App() {
-
   return (
     <>
-    <Start />
-    <div className='contenerPage'>
- <Header/>
- <BoxCaroussel/>
- <Article/>
-  <Footer/>
-  </div>
- </>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      </Routes>
+      <Animation />
+      </>
+    
   );
 }
 
