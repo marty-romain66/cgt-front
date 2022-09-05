@@ -26,7 +26,7 @@ const Articles = ({ post }) => {
                 trigger: `#articles${datas[i].id}`,
                 start: "top center",
                 end: "top center",
-                markers: true,
+            
               },
             }
           );
@@ -46,7 +46,7 @@ const Articles = ({ post }) => {
                 trigger: `#articles${datas[i].id}`,
                 start: "top center",
                 end: "top center",
-                markers: true,
+              
               },
             }
           );
@@ -63,7 +63,7 @@ const Articles = ({ post }) => {
               trigger: `#articles${datas[i].id} `,
               start: "top center",
               end: "top center",
-              markers: true,
+             
             },
           }
         );
