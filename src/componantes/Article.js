@@ -33,7 +33,7 @@ const tl = gsap.timeline()
 React.useEffect(() => {
     tl.to('.css-1gvlcqt-MuiGrid-root' , {
         opacity: 1,
-        duration: 3,
+        duration: 5,
     })
    
 }, [])
