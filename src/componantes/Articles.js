@@ -34,9 +34,12 @@ if (toggle) {
 
   const animation = () => {
     if (datas) {
+      console.log(datas);
       for (let i = 0; i < datas.length; i++) {
+        
+        if (datas[i].id !== 9) {
 
-        if (i % 2 === 0 ) {
+        if (i % 2 === 0) {
           gsap.fromTo(
             `#articles${datas[i].id}`,
             {
@@ -56,7 +59,7 @@ if (toggle) {
               },
             }
           );
-        } else {
+        } else  {
           gsap.fromTo(
             `#articles${datas[i].id}`,
             {
@@ -95,8 +98,27 @@ if (toggle) {
         
         );
       
-    }
-
+    
+  } else if (datas[i].id == 9) {
+    gsap.fromTo(
+      `#articles${datas[i].id} .description span `,
+      {
+        width: 0,
+      },
+      {
+        width: "400px",
+        duration: 1.25,
+        scrollTrigger: {
+          trigger: `#articles${datas[i].id} `,
+          start: "top center",
+          end: "top center",
+         
+        },
+      }
+    
+    );
+  }
+}
     }
   };
 
