@@ -14,9 +14,16 @@ const Test = () => {
 
     return (
      <>
-    {/* <Header/>
-    <SignInSide/> */}
-    fffffffffffffffffffffffffff
+     <Header/>
+     <div className="box1Article">
+        <div className="boxImage">
+            <img src="https://radiant-hollows-62118.herokuapp.com/uploads/image_963e383bac.jpg" alt="" />
+        </div>
+        <div className="boxText">
+            <h1>Test</h1>
+            </div>
+     </div>
+  
     </>
     );
 };
