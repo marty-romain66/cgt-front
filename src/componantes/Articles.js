@@ -1,15 +1,44 @@
 import React, { useState, useEffect } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollTrigger,  } from "gsap/ScrollTrigger";
+
 gsap.registerPlugin(ScrollTrigger);
+
 const Articles = ({ post }) => {
+  const navigate = useNavigate();
   const [toggle, setToggle] = useState(false);
   const datas = post;
   console.log(datas);
+const tl = gsap.timeline()
+if (toggle !==false) {
+
+
+    tl.to(".box", {
+      opacity: 0,
+      duration: 1,
+      onComplete: () => {
+        window.scrollTo(0, 0);
+      }
+    });
+    tl.to(".box", {
+      onComplete: () => {
+        navigate(`/article:${toggle}`);
+      }
+    });
+   
+  }
+  
+
+
 
   const animation = () => {
     if (datas) {
+      console.log(datas);
       for (let i = 0; i < datas.length; i++) {
+        
+        if (datas[i].id !== 9) {
+
         if (i % 2 === 0) {
           gsap.fromTo(
             `#articles${datas[i].id}`,
@@ -30,7 +59,7 @@ const Articles = ({ post }) => {
               },
             }
           );
-        } else {
+        } else  {
           gsap.fromTo(
             `#articles${datas[i].id}`,
             {
@@ -66,8 +95,30 @@ const Articles = ({ post }) => {
              
             },
           }
+        
         );
+      
+    
+  } else if (datas[i].id == 9) {
+    gsap.fromTo(
+      `#articles${datas[i].id} .description span `,
+      {
+        width: 0,
+      },
+      {
+        width: "400px",
+        duration: 1.25,
+        scrollTrigger: {
+          trigger: `#articles${datas[i].id} `,
+          start: "top center",
+          end: "top center",
+         
+        },
       }
+    
+    );
+  }
+}
     }
   };
 
@@ -79,7 +130,7 @@ const Articles = ({ post }) => {
     <>
       <div className="boxArticles">
         {datas?.map((data) => (
-          <div className="blog-card" id={"articles" + data.id}>
+          <div className="blog-card" id={"articles" + data.id} style={{cursor : "pointer"}} onClick={()=> setToggle([data.id])}>
             <div className="meta">
               <div
                 className="photo"
@@ -121,8 +172,8 @@ const Articles = ({ post }) => {
                 {data.attributes.contenu}
                 <span></span>
               </p>
-              <p className="read-more">
-                <a href="#">Read More</a>
+              <p className="read-more" >
+                <a style={{cursor : "pointer"}} onClick={()=> setToggle([data.id])} >Lire la suite</a>
               </p>
             </div>
           </div>

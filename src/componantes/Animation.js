@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 
 const Animation = () => {
 
+
     useEffect(() => {
         gsap.timeline()
 
@@ -17,6 +18,7 @@ const Animation = () => {
     duration: .7,
     opacity: 0,
 })
+
 .to(".boxAnimation", 
 {
     zIndex: -1,
@@ -74,6 +76,7 @@ const Animation = () => {
           />
         </g>
       </svg>
+      
         </div>
     );
 };
