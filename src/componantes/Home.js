@@ -7,11 +7,14 @@ import Animation from "./Animation";
 import Articles from "./Articles";
 import axios from "axios";
 import { EmblaCarousel } from "./EmblaCarousel";
+<<<<<<< HEAD
+import gsap from "gsap";
+=======
+>>>>>>> dd2bc0808bb2e5a832a07f6642df42a9f633014a
 
 
 const Home = () => {
   const [datas, setDatas] = useState([]);
-
 useEffect(() => {
 
   axios.get("https://radiant-hollows-62118.herokuapp.com/api/posts?populate=*"
@@ -34,7 +37,6 @@ useEffect(() => {
       <Caroussel />
       <Articles  post={datas.data}  />
       <Footer/>
-      
     </div>
   );
 };
