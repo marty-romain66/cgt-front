@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .boxArt {
     height: 100vh;
 }
@@ -30,3 +31,34 @@ img {
 .boxContact {
     margin-top: 500px;
 }
+=======
+.boxArt {
+    height: 100vh;
+}
+
+.box1Article {
+    display: flex;
+    
+}
+.boxImage {
+width: 50vw;
+height: 90vh;
+border: 1px solid black;
+margin-top: 100px;
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+}
+.boxText {
+    width: 50vw;
+    height: 90vh;
+   
+    gap: 20px;
+    border: 1px solid black;
+    margin-top: 100px;
+}
+>>>>>>> dd2bc0808bb2e5a832a07f6642df42a9f633014a
