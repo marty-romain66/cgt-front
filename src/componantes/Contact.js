@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ContactUs } from './ContactUs';
 import Header from './Header';
@@ -13,22 +12,5 @@ const Contact = () => {
         
     );
 };
-
-
-import React from 'react';
-import { ContactUs } from './ContactUs';
-import Header from './Header';
-
-const Contact = () => {
-    return (
-        <>
-            <Header/>
-
-            <ContactUs/>
-            </>
-        
-    );
-};
-
 
 export default Contact;

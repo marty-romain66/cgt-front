@@ -7,9 +7,7 @@ import Animation from "./Animation";
 import Articles from "./Articles";
 import axios from "axios";
 import { EmblaCarousel } from "./EmblaCarousel";
-
 import gsap from "gsap";
-
 
 
 const Home = () => {

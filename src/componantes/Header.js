@@ -1,18 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 import { Routes, Route, Link } from "react-router-dom";
-
 gsap.registerPlugin(ScrollTrigger);
 const Header = () => {
 
     const [class2 , setClass2] = useState("header");
 useEffect(() => {
-
 if (window.location.pathname === "/article" || window.location.pathname === "/contact" ) {
-
-if (window.location.pathname === "/article") {
     setClass2("header2");
 }
 }, []);
