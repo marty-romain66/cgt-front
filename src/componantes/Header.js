@@ -7,7 +7,7 @@ const Header = () => {
 
     const [class2 , setClass2] = useState("header");
 useEffect(() => {
-if (window.location.pathname === "/article" || window.location.pathname === "/contact" ) {
+if (window.location.pathname === "/article" || window.location.pathname === "/contact"|| window.location.pathname === "/manif" ) {
     setClass2("header2");
 }
 }, []);
@@ -36,7 +36,7 @@ tl.to ('.topHeader span', {
                 <img src="./la-cgt.png" alt="" />
                 <span className='acal'>A.C.A.L</span>
             </div>
-            <div className="bottomHeader"> <Link to="/">Accueil</Link><Link to="/contact">Nous Contacter</Link></div>
+            <div className="bottomHeader"> <Link to="/">Accueil</Link><Link to="/contact">Nous Contacter</Link> <Link to="/manif">Prochaine mobilisation</Link></div>
 
 
             
