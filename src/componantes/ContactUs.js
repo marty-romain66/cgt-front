@@ -17,13 +17,13 @@ export const ContactUs = () => {
 
   return (
      <div className='boxContact'><form ref={form} onSubmit={sendEmail}>
-          <label>Name</label>
+          <label>Nom</label>
           <input type="text" name="user_name" />
-          <label>Email</label>
+          <label>Votre Email</label>
           <input type="email" name="user_email" />
           <label>Message</label>
           <textarea name="message" />
-          <input type="submit" value="Send" />
+          <input type="submit" value="Envoyer" />
       </form>
     </div>
     

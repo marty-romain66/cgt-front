@@ -21,7 +21,10 @@
         align-items: center;
        color: white;
        gap: 150px;
-
+        a {
+            text-decoration: none;
+            color: white;
+        }
     }
     img {
         position: absolute;
