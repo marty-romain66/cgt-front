@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import gsap from 'gsap';
 import React, {useEffect} from 'react';
 import axios from 'axios';
@@ -58,8 +58,8 @@ console.log(error);
     );
 };
 
-=======
-<<<<<<< HEAD
+
+
 import gsap from 'gsap';
 import React, {useEffect} from 'react';
 import axios from 'axios';
@@ -119,7 +119,7 @@ console.log(error);
     );
 };
 
-=======
+
 import gsap from 'gsap';
 import React, {useEffect} from 'react';
 import axios from 'axios';
@@ -179,6 +179,5 @@ console.log(error);
     );
 };
 
->>>>>>> 919738e35224101ae5b77ef583f8debeb1f5058e
->>>>>>> dd2bc0808bb2e5a832a07f6642df42a9f633014a
+
 export default Test;

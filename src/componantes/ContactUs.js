@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
@@ -29,7 +29,7 @@ export const ContactUs = () => {
     </div>
     
   );
-=======
+
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
@@ -60,5 +60,5 @@ export const ContactUs = () => {
     </div>
     
   );
->>>>>>> 919738e35224101ae5b77ef583f8debeb1f5058e
+
 };
