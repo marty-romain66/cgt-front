@@ -24,6 +24,7 @@ const Article = ({data}) => {
     </div>
     <div className="boxText">
         <h1>{data.data.attributes.title}</h1>
+        <p> {data.data.attributes.contenu} </p>
         </div>
  </div> ) : null}
  </>

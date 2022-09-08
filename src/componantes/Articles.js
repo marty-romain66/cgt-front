@@ -169,7 +169,7 @@ if (toggle !==false) {
               ) : null}
 
               <p>
-                {data.attributes.contenu}
+                {data.attributes.contenu.length >200 ? data.attributes.contenu.slice(0,500) + "..." : data.attributes.contenu}
                 <span></span>
               </p>
               <p className="read-more" >
