@@ -11,7 +11,7 @@ const Articles = ({ post }) => {
   const datas = post;
   console.log(datas);
 const tl = gsap.timeline()
-if (toggle) {
+if (toggle !==false) {
 
 
     tl.to(".box", {
@@ -23,7 +23,7 @@ if (toggle) {
     });
     tl.to(".box", {
       onComplete: () => {
-        navigate("/article");
+        navigate(`/article:${toggle}`);
       }
     });
    
@@ -130,7 +130,7 @@ if (toggle) {
     <>
       <div className="boxArticles">
         {datas?.map((data) => (
-          <div className="blog-card" id={"articles" + data.id}>
+          <div className="blog-card" id={"articles" + data.id} style={{cursor : "pointer"}} onClick={()=> setToggle([data.id])}>
             <div className="meta">
               <div
                 className="photo"
@@ -173,7 +173,7 @@ if (toggle) {
                 <span></span>
               </p>
               <p className="read-more" >
-                <a style={{cursor : "pointer"}} onClick={()=> setToggle(true)}>Lire la suite</a>
+                <a style={{cursor : "pointer"}} onClick={()=> setToggle([data.id])} >Lire la suite</a>
               </p>
             </div>
           </div>
