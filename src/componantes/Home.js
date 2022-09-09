@@ -29,11 +29,14 @@ useEffect(() => {
 
   return (
     <div className="box">
+      
       <Animation />
       <Header />
+      <div className="box3">
       <Caroussel />
       <Articles  post={datas.data}  />
       <Footer/>
+    </div>
     </div>
   );
 };

@@ -27,12 +27,14 @@ console.log(error);
 
 
     useEffect(() => {
-        gsap.fromTo(".boxArt", {
-            opacity: 0,
+        gsap.fromTo(".box4", {
+            opacity: 1,
+            x: "-100%",
         }
         , {
+            x: 0,
             opacity: 1,
-            duration: 2,
+            duration: 1,
             height: "100vh",
         })
 
@@ -43,6 +45,7 @@ console.log(error);
     return (
      <div className="boxArt">
      <Header/>
+     <div className="box4">
      {/* <div className="box1Article">
         <div className="boxImage">
             <img src={`https://radiant-hollows-62118.herokuapp.com${data.attributes.media.data.attributes.url}`} alt="" />
@@ -52,6 +55,7 @@ console.log(error);
             </div>
      </div> */}
      <Article   data={data} />
+     </div>
      </div>
     
     );

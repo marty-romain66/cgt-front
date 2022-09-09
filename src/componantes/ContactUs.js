@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
 export const ContactUs = () => {
+
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -17,6 +18,7 @@ export const ContactUs = () => {
 
   return (
      <div className='boxContact'><form ref={form} onSubmit={sendEmail}>
+      
           <label>Nom</label>
           <input type="text" name="user_name" />
           <label>Votre Email</label>
@@ -25,6 +27,7 @@ export const ContactUs = () => {
           <textarea name="message" />
           <input type="submit" value="Envoyer" />
       </form>
+      
     </div>
     
   );
