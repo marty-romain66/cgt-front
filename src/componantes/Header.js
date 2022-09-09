@@ -57,7 +57,7 @@ tl.to ('.topHeader span', {
                 <img src="./la-cgt.png" alt="" />
                 <span className='acal'>A.C.A.L</span>
             </div>
-            <div className="bottomHeader"> <a onClick={()=> setToggle(true)}>Accueil</a><Link to="/contact">Nous Contacter</Link> <Link to="/manif">Prochaine mobilisation</Link></div>
+            <div className="bottomHeader"> <a style={{cursor : "pointer"}} onClick={()=> setToggle(true)}>Accueil</a><Link to="/contact">Nous Contacter</Link> <Link to="/manif">Prochaine mobilisation</Link></div>
         
 
             
