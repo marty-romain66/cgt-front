@@ -3,14 +3,28 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Caroussel from "./Caroussel";
 import Animation from "./Animation";
-
+import { useDispatch, useSelector } from "react-redux";
 import Articles from "./Articles";
 import axios from "axios";
 import { EmblaCarousel } from "./EmblaCarousel";
 import gsap from "gsap";
-
+import { animation, setAnimation2 } from '../features/animation.slice';
 
 const Home = () => {
+  const toggle = useSelector((state) => state.animation).animation2;
+  const toggleAnim = useSelector((state) => state.animation.animation);
+ useEffect(() => {
+ if (toggle === true) {
+    gsap.fromTo(".box3", {
+
+    y: "100%",
+    }, {
+    y: 0,
+    });
+  }
+  }, []);
+ 
+ 
   const [datas, setDatas] = useState([]);
 useEffect(() => {
 
@@ -29,8 +43,10 @@ useEffect(() => {
 
   return (
     <div className="box">
-      
+
+      {toggleAnim !== true ? (  
       <Animation />
+      ) : ( null )}
       <Header />
       <div className="box3">
       <Caroussel />

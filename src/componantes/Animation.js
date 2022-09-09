@@ -1,9 +1,12 @@
 import React, { useEffect} from 'react';
 import { gsap } from "gsap";
+import { animation, setAnimation } from '../features/animation.slice';
+import { useDispatch, useSelector } from "react-redux";
 
 const Animation = () => {
 
-
+  const dispatch = useDispatch();
+  const toggleAnim = useSelector((state) => state.animation.value);
     useEffect(() => {
         gsap.timeline()
 
@@ -27,6 +30,9 @@ const Animation = () => {
 .to("#root",
 {
     overflow: "visible",
+    onComplete: () => {
+        dispatch(setAnimation(true))
+    }
 })
 
     } , []);

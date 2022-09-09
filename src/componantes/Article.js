@@ -17,6 +17,7 @@ const Article = ({data}) => {
 
   return (
     <>
+     
     {data.data? (
     <div className="box1Article">
     <div className="boxImage">

@@ -2,10 +2,12 @@ import React, { useState, useEffect } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+import { useDispatch, useSelector } from "react-redux";
+import { animation, setAnimation2 } from '../features/animation.slice';
 gsap.registerPlugin(ScrollTrigger);
 
 const Articles = ({ post }) => {
+  const toggleAnim = useSelector((state) => state.animation).animation2;
   const navigate = useNavigate();
   const [toggle, setToggle] = useState(false);
   const datas = post;
@@ -15,19 +17,31 @@ const Articles = ({ post }) => {
     tl.to(".box3", {
      
     x: "-100%",
+    duration: .5,
       onComplete: () => {
         window.scrollTo(0, 0);
       },
     });
+    tl.to(".box5", {
+      opacity: 1,
+     
+    });
+
+
     tl.to(".box", {
       onComplete: () => {
         navigate(`/article:${toggle}`);
       },
     });
+   
+    tl.to(".box5", {
+      opacity: 0,
+    });
   }
 
   const animation = () => {
-    if (datas) {
+    
+    if (datas && toggleAnim !== true) {
       console.log(datas);
       for (let i = 0; i < datas.length; i++) {
         if (datas[i].id !== 9) {

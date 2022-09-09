@@ -29,12 +29,15 @@ console.log(error);
     useEffect(() => {
         gsap.fromTo(".box4", {
             opacity: 1,
-            x: "-100%",
+            x: "100%",
         }
         , {
+            delay : 0.4
+            ,
             x: 0,
             opacity: 1,
-            duration: 1,
+            duration: .5,
+            ease: "power4.in",
             height: "100vh",
         })
 
