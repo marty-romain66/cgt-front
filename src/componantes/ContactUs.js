@@ -1,8 +1,16 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
-
+import gsap from 'gsap';
 export const ContactUs = () => {
+useEffect(() => {
+ gsap.fromTo(".boxContact " , {
+    x: "-100%",
+ }, {
+    x: "0%",
+ });
+    
 
+}, []);
   const form = useRef();
 
   const sendEmail = (e) => {
