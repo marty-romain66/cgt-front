@@ -32,14 +32,13 @@ console.log(error);
             x: "100%",
         }
         , {
-            delay : 0.4
-            ,
             x: 0,
             opacity: 1,
-            duration: .5,
-            ease: "power4.in",
+            ease: "power4.out",
             height: "100vh",
+            perspective: 1000,
         })
+
 
 
     }, []);

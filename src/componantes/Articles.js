@@ -20,23 +20,10 @@ const Articles = ({ post }) => {
     duration: .5,
       onComplete: () => {
         window.scrollTo(0, 0);
-      },
-    });
-    tl.to(".box5", {
-      opacity: 1,
-     
-    });
-
-
-    tl.to(".box", {
-      onComplete: () => {
         navigate(`/article:${toggle}`);
       },
     });
-   
-    tl.to(".box5", {
-      opacity: 0,
-    });
+    
   }
 
   const animation = () => {
