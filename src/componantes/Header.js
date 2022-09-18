@@ -51,11 +51,11 @@ const Header = () => {
       </div>
       <div className="bottomHeader">
         {" "}
-        <a style={{ cursor: "pointer" }} onClick={() => setToggle(true)}>
+        <a className="link link1" style={{ cursor: "pointer" }} onClick={() => setToggle(true)}>
           Accueil
         </a>
-        <Link to="/contact">Nous Contacter</Link>{" "}
-        <Link to="/manif">Prochaine mobilisation</Link>
+        <Link className="link" to="/contact">Nous Contacter</Link>{" "}
+        <Link className="link" to="/manif">Prochaine mobilisation</Link>
       </div>
     </div>
   );
