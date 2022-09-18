@@ -3,17 +3,7 @@ import React, {useEffect} from 'react';
 import axios from 'axios';
 
 const Article = ({data}) => {
-// useEffect(() => {
-//   if (data.data)
-//   {
-// if (window.location.href === `http://localhost:3000/article:${data.data.id}` ) {
-//   gsap.to("#root",{
-//     minHeight: "110vh",
-//   })
-// }
-//   }
-// else return
-// }, [data]);
+
 
   return (
     <>
