@@ -1,9 +1,25 @@
 .boxAnimation {
-    position: absolute;
+    position: fixed;
     z-index: 3;
     min-height: 100vh;
     width: 100%;
     background-color: #f03e3e;
+ .boxTexte {
+    position: absolute;
+    top: 70%;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    display: flex;
+    justify-content: center;
+
+ }
+
 }
 
 
